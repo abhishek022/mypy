@@ -25,14 +25,3 @@ def file_reading(fo):
 
 file_opening()
 
-"""import csv
-def reading_csv():
-    
-    csv_file=input("enter the path to your csv file")
-    fc=open(csv_file,"r")
-    content=csv.reader(fc)
-    for row in content:
-        print( row)
-
-reading_csv()"""
-    
