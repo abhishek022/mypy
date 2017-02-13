@@ -16,23 +16,28 @@ def file_writing(fo):
 
 def file_reading(fo):
     print("reading")
-   
     read_data=fo.readlines()
     for line in read_data:
         words=line.split(",")
         print(words)
-            
+
+        
+        
+from simplecrypt import encrypt, decrypt        
+def lets_crypt():
+    password=input("give your password to crypt")
+    plain_text=input("your text")
+    ecoded_text  = encrypt(password,plain_text)
+    decoded_text = decrypt(password,ecoded_text).decode('utf8')
+    print(decoded_text)
+
+
 
 file_opening()
+lets_crypt()
 
-"""import csv
-def reading_csv():
-    
-    csv_file=input("enter the path to your csv file")
-    fc=open(csv_file,"r")
-    content=csv.reader(fc)
-    for row in content:
-        print( row)
 
-reading_csv()"""
-    
+
+
+
+
