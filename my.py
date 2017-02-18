@@ -6,7 +6,9 @@ def file_opening():
     print("the file openend is",fob.name)
     print("Is the file closed ",fob.closed)
     print("In which mode file is opened",fob.mode)
-
+    file_writing(fob)
+    file_reading(fob)
+    fob.close()
 
 def file_writing(fo):
     x=input("enter your text")
@@ -31,10 +33,7 @@ def encrypt():
 
 
 file_opening()
-file_writing(fob)
-file_reading(fob)
-fob.close()
-lets_encrypt()
+encrypt()
 
 
 
