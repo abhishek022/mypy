@@ -1,4 +1,3 @@
-
 def file_opening():
     print("enter the path of the file to open")
     path=input("type here")
@@ -9,6 +8,7 @@ def file_opening():
     file_writing(fob)
     file_reading(fob)
     fob.close()
+
 
 def file_writing(fo):
     x=input("enter your text")
@@ -30,10 +30,27 @@ def encrypt():
     m.update(b"Nobody inspects")
     print("the encrypted text is",m.hexdigest()) 
 
+def salt_encrypt():
+    import hashlib, binascii
+    dk = hashlib.pbkdf2_hmac('sha256', b'my password is too strong to crack', b'salt', 100000)
+    print("hashing with salt",binascii.hexlify(dk))
+    
+def encoding():
+    import base64
+    user_data=input("Enter your text to encode")
+    b = bytes(user_data, 'utf-8')
+    code=base64.b64encode(b)
+    print(code)
+    data=base64.b64decode(code)
+    print(data)
 
-
+    
+    
 file_opening()
 encrypt()
+salt_encrypt()
+encoding()
+
 
 
 
