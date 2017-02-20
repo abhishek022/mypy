@@ -1,0 +1,17 @@
+import gzip
+import shutil
+
+
+#create a zip file
+def compress():
+    import gzip
+    content = "Lots of content here"
+    with gzip.open('file.txt.gz', 'wb') as f:
+        f.write(content)
+
+#zip a existing file    
+"""def compress1():
+    with open('file.txt', 'rb') as f_in, gzip.open('file.txt.gz', 'wb') as f_out:
+        shutil.copyfileobj(f_in, f_out)"""
+
+compress()
