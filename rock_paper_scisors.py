@@ -21,10 +21,6 @@ def game(userHand,computerHand):
             print("You lose")
 
 
-
-
-
-
 userHand =input(":")
 computerHand=random.random();
 if computerHand<=0.33:
